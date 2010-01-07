@@ -1,38 +1,97 @@
-!XTerm*underLine: on
-XTerm*colorMode: on
-XTerm*colorBD: lightyellow
-XTerm*colorBDMode: off
-XTerm*colorUL: yellow
-XTerm*colorULMode: on
-XTerm*dynamicColors: off
-XTerm*highlightSelection: true
+URxvt.scrollBar:           false
+URxvt.saveLines:           4096
+URxvt.internalBorder:      4
+URxvt.externalBorder:      0
+URxvt.highlightSelection:  true
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.loginShell: true
 
-!XTerm*background: Black
-!XTerm*foreground: White
+URxvt.font: xft:Inconsolata:pixelsize=14:dpi=32
 
-XTerm*background: rgb:00/00/00
-XTerm*foreground: rgb:cf/cf/cf
-XTerm*color0:     rgb:00/00/00
-XTerm*color1:     rgb:e0/10/10
-XTerm*color2:     rgb:20/ad/20
-XTerm*color3:     rgb:d4/c2/4f
-XTerm*color4:     rgb:23/1b/b8
-XTerm*color5:     rgb:9c/38/85
-XTerm*color6:     rgb:1d/bd/b8
-XTerm*color7:     rgb:fe/fe/fe
-XTerm*color8:     rgb:6a/6a/6a
-XTerm*color9:     rgb:e8/3a/3d
-XTerm*color10:    rgb:35/e9/56
-XTerm*color11:    rgb:ff/ff/2f
-XTerm*color12:    rgb:3a/53/f0
-XTerm*color13:    rgb:e6/28/ba
-XTerm*color14:    rgb:1c/f5/f5
-XTerm*color15:    rgb:ff/ff/ff
+URxvt.urlLauncher: /home/azer/bin/w3
+URxvt.matcher.button: 1 
 
-xterm*faceName: Inconsolata
-xterm*faceSize: 10
+!URxvt.perl-ext:      default,url-select
+!URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.urlLauncher:   w3
+!URxvt.underlineURLs: true
 
-XTerm*geometry: 110×40
+!URxvt.depth: 32
+!URxvt*background: rgba:0000/0000/0000/cccc
 
-XTerm*metaSendsEscape: true
-XTerm*eightBitInput: false
+URxvt.transparent:true
+URxvt.shading: 20
+
+Urxvt.secondaryScroll:  true
+
+!
+! Color
+!
+URxvt.cursorColor: darkred
+URxvt.borderColor: black
+URxvt.scrollColor: black
+URxvt.background:  black
+URxvt.foreground:  #efefcf
+
+URxvt.keysym.M-C-0: command:\033]710;xft: Inconsolata:pixelsize=10:hinting=true:dpi=96\007
+URxvt.keysym.M-C-1: command:\033]710;xft: Inconsolata:pixelsize=12:hinting=true:dpi=96\007
+URxvt.keysym.M-C-2: command:\033]710;xft: Inconsolata:pixelsize=14:hinting=true:dpi=96\007
+URxvt.keysym.M-C-3: command:\033]710;xft: Inconsolata:pixelsize=16:hinting=true:dpi=96\007
+URxvt.keysym.M-C-4: command:\033]710;xft: Inconsolata:pixelsize=20:hinting=true:dpi=96\007
+URxvt.keysym.M-C-5: command:\033]710;xft: Inconsolata:pixelsize=26:hinting=true:dpi=96\007
+URxvt.keysym.M-C-6: command:\033]710;xft: Inconsolata:pixelsize=36:hinting=true:dpi=96\007
+
+URxvt*background: #000010
+URxvt*foreground: Wheat
+URxvt*cursorColor: magenta
+URxvt*colorUL: #c5f779
+URxvt*underlineColor: #c5f779
+URxvt*color0: #000000
+URxvt*color1: #9e1828
+URxvt*color2: #aece92
+URxvt*color3: #968a38
+URxvt*color4: #414171
+URxvt*color5: #963c59
+URxvt*color6: #418179
+URxvt*color7: #bebebe
+URxvt*color8: #666666
+URxvt*color9: #cf6171
+URxvt*color10: #c5f779
+URxvt*color11: #fff796
+URxvt*color12: #4186be
+URxvt*color13: #cf9ebe
+URxvt*color14: #71bebe
+URxvt*color15: #ffffff
+
+!! black
+!URxvt*color0:      #111111
+!URxvt*color8:      #999999
+!
+!! red
+!URxvt*color1:      #cc1800
+!URxvt*color9:      #ff3e00
+!
+!! green
+!URxvt*color2:      #00cc00
+!URxvt*color10:     #77ff44
+!
+!! yellow
+!URxvt*color3:      #ffec00
+!URxvt*color11:     #ffff33
+!
+!! blue
+!URxvt*color4:      #515181
+!URxvt*color12:     #72d0e1
+!
+!! magenta
+!URxvt*color5:      #b65c79
+!URxvt*color13:     #e078b5
+!
+!! cyan
+!URxvt*color6:      #519189
+!URxvt*color14:     #71bebe
+!
+!! white
+!URxvt*color7:      #ffffff
+!URxvt*color15:     #ffffff

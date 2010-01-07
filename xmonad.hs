@@ -20,6 +20,10 @@ import XMonad.Layout.MosaicAlt
 import XMonad.Layout.Combo
 import XMonad.Layout.WindowNavigation
 
+import XMonad.Layout.PerWorkspace
+
+import XMonad.Layout.NoBorders
+
 myManageHook = composeAll
     [
       className =? "Emacs"            --> doF (W.shift "HOME"),
@@ -48,7 +52,7 @@ myKeys =
        -- XF86AudioPlay
        , ((0            , 0x1008ff14), spawn "mocp -G")
     ]
-    where modMask     = mod4Mask
+    where modMask     = mod1Mask
           modShft     = modMask .|. shiftMask
           modCtrl     = modMask .|. controlMask
           modShCr     = modMask .|. shiftMask .|. controlMask
@@ -71,16 +75,16 @@ main = do
     xmonad $ defaultConfig { 
         -- basic conf
         modMask            = mod4Mask,
-        terminal           = "xterm",
+        terminal           = "urxvt",
         borderWidth        = 2,
         workspaces         = ["HOME","DEV","IRC","WWW"] ++ map show [5..9],
         -- colors
         normalBorderColor  = "#000000",
-        focusedBorderColor = "#111111",
+        focusedBorderColor = "#000000",
         -- hooks
         manageHook = myManageHook <+> manageDocks,
         -- layoutHook = avoidStruts $ layoutHook defaultConfig,
-        layoutHook      = windowNavigation $ (avoidStruts (tall ||| Mirror tall ||| tabbed shrinkText myTabConfig ||| Full)),
+        layoutHook      = windowNavigation $ (avoidStruts (tall ||| Mirror tall ||| noBorders (tabbed shrinkText myTabConfig) ||| noBorders Full ||| onWorkspace "WWW" (tabbed shrinkText myTabConfig) tall)),
         logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
