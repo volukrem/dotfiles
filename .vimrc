@@ -46,8 +46,7 @@ syntax enable "Enable syntax hl
 set gfn=Monospace\ 10
 set shell=/bin/bash
 
-colorscheme peaksea
-set background=dark
+colorscheme candycode_azer
 set nonu
 
 set encoding=utf8
@@ -57,6 +56,8 @@ catch
 endtry
 
 set ffs=unix,dos,mac "Default file types
+
+set t_Co=256
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,4 +93,3 @@ function! FixTR()
     exec ":%s/ö/o/ge"
     exec ":%s/ð/g/ge"
 endfunction
-
