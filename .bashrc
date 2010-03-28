@@ -9,5 +9,9 @@ alias mv='mv -v -i'
 alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
 
+alias vi='vim'
+
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
+
+

@@ -1,3 +1,7 @@
+(setq make-backup-files nil) 
+(setq auto-save-default nil)
+
+
 ;setup slime extension
 (setq inferior-lisp-program "/usr/bin/clisp")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/slime/")
@@ -10,5 +14,9 @@
 
 ; set color theme
 (require 'color-theme)
-(setq color-theme-is-global t)
-(color-theme-select 'Arjen')
+(color-theme-select 'Arjen)
+
+;;(autoload 'wl "wl" "Wanderlust" t)
+;(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+;(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+
