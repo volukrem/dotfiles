@@ -10,7 +10,7 @@ XTerm*highlightSelection: true
 !———————————————————-
 ! Colorscheme based on the gvim colorscheme desert
 !———————————————————-
-!XTerm*background: #000
+!XTerm*background: #000000
 !XTerm*foreground: White
 
 !colors
@@ -36,7 +36,7 @@ XTerm*color15:    rgb:ff/ff/ff
 
 !set the font, and fond size
 ! this also uses a antialias/scalable font
-xterm*faceName: Andale Mono
+xterm*faceName: Inconsolata
 xterm*faceSize: 10
 
 !set the window geometry
