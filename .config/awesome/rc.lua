@@ -7,6 +7,9 @@ require("beautiful")
 -- Notification library
 require("naughty")
 
+require("battery")
+require("volume")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/home/azer/.config/awesome/themes/zavot/theme.lua")
@@ -68,7 +71,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
 --                                    menu = mymainmenu })
 -- }}}
 
--- {{{ Wibox
+-- {{{  Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
@@ -134,7 +137,7 @@ for s = 1, screen.count() do
                                           end, mytasklist.buttons)
 
     -- Create the wibox
-    mywibox[s] = awful.wibox({ position = "top", screen = s })
+    mywibox[s] = awful.wibox({ position = "bottom", screen = s })
     -- Add widgets to the wibox - order matters
     mywibox[s].widgets = {
         {
@@ -145,6 +148,8 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+        batterywidget,
+        volume.widget,
 --        s == 1 and mysystray or nil,
         mysystray,
         mytasklist[s],
@@ -163,6 +168,11 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    awful.key({ modkey },"b",function()
+      mywibox[ mouse.screen ].visible = not mywibox[mouse.screen].visible
+    end),
+    awful.key({ }, "XF86AudioRaiseVolume", volume.increase),
+    awful.key({ }, "XF86AudioLowerVolume", volume.decrease),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -334,3 +344,4 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+

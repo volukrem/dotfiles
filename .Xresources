@@ -7,14 +7,9 @@ XTerm*colorULMode: on
 XTerm*dynamicColors: off
 XTerm*highlightSelection: true
 
-!———————————————————-
-! Colorscheme based on the gvim colorscheme desert
-!———————————————————-
-!XTerm*background: #000000
+!XTerm*background: Black
 !XTerm*foreground: White
 
-!colors
-!(unknown)
 XTerm*background: rgb:00/00/00
 XTerm*foreground: rgb:cf/cf/cf
 XTerm*color0:     rgb:00/00/00
@@ -34,16 +29,12 @@ XTerm*color13:    rgb:e6/28/ba
 XTerm*color14:    rgb:1c/f5/f5
 XTerm*color15:    rgb:ff/ff/ff
 
-!set the font, and fond size
-! this also uses a antialias/scalable font
 xterm*faceName: Inconsolata
 xterm*faceSize: 10
 
-!set the window geometry
 XTerm*geometry: 110×40
 
 XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 
-!fix the alt key problem
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
