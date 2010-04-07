@@ -1,13 +1,19 @@
+------------------------------
+-- Volume Widget For AwesomeWM 3.4
+-- Azer Koculu <azerkoculu@gmail.com>
+-- http://azer.kodfabrik.com
+-- Wed Apr  7 01:34:35 UTC 2010
+------------------------------
 local widgetobj = widget({ type = 'textbox', name = 'volume_widget' })
 local channel = "vmix0-outvol"
 
 local function increase()
-  awful.util.spawn("ossvol -i 5")
+  awful.util.spawn("ossvol -i 3")
   update()
 end
 
 local function decrease()
-  awful.util.spawn("ossvol -d 5")
+  awful.util.spawn("ossvol -d 3")
   update()
 end
 
