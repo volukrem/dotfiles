@@ -14,5 +14,3 @@ alias vi='vim'
 
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
-
-
