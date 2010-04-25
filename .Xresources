@@ -34,7 +34,5 @@ xterm*faceSize: 10
 
 XTerm*geometry: 110×40
 
-XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false

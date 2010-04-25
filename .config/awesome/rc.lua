@@ -12,7 +12,7 @@ require("volume")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/azer/.config/awesome/themes/zavot/theme.lua")
+beautiful.init("/home/azer/.config/awesome/themes/sid3k/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
@@ -32,8 +32,8 @@ layouts =
 --    awful.layout.suit.floating,
     awful.layout.suit.tile,
 --    awful.layout.suit.tile.left,
---    awful.layout.suit.tile.bottom,
---    awful.layout.suit.tile.top,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
 --    awful.layout.suit.fair,
 --    awful.layout.suit.fair.horizontal,
 --    awful.layout.suit.spiral,
