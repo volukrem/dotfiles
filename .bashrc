@@ -15,4 +15,7 @@ alias vi='vim'
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
 
-
+export CLOJURE_EXT=~/.clojure
+PATH=$PATH":~/opt/clojure-contrib/launchers/bash"
+#alias clj='cd ~/.clojure; java -cp clojure.jar clojure.lang.Repl;'
+alias clj=clj-env-dir
