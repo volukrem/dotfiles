@@ -1,6 +1,8 @@
 PS1='\[\e[0;31m\]\u@\h\[\e[m\]\[\e[0;37m\]:\[\e[m\]\[\e[1;32m\]\w\[\e[m\]\[\e[0;37m\]\$ \[\e[m\]\[\e[0;37m\]'
 export TERM=xterm-256color
-export PATH=$PATH":/var/lib/gems/1.8/bin:/home/azer/bin"
+export PATH=$PATH:/home/azer/bin
+export PATH=$PATH:~/opt/leiningen
+export PATH=$PATH:/var/lib/gems/1.8/bin/
 
 # ALIASES
 alias ls='ls -a --color=auto'
@@ -15,7 +17,4 @@ alias vi='vim'
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
 
-export CLOJURE_EXT=~/.clojure
-PATH=$PATH":~/opt/clojure-contrib/launchers/bash"
-#alias clj='cd ~/.clojure; java -cp clojure.jar clojure.lang.Repl;'
-alias clj=clj-env-dir
+TZ='Europe/Istanbul'; export TZ
