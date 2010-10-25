@@ -49,7 +49,25 @@ status() {
   then
     mocinfo="MOC: $(mocp -i|grep Artist| sed 's/Artist: //') - $(mocp -i|grep SongTitle| sed 's/SongTitle: //') |"
   fi
-  
+
+  #mplayerstate=$(tail -n 1 /tmp/mplayer|grep Exiting)
+  #mplayerinfo=""
+
+  #if [ $mplayerstate = "" ]
+  #then
+  #  streamtitle=$(tac /tmp/mplayer|grep StreamTitle -m 1|sed "s/.*StreamTitle\='//"|sed "s/'.*//")
+  #  mplayerinfo="MPlayer: $streamtitle |" 
+  #fi
+
+  rpinfo=""
+  if [ -e "/tmp/rp" ]; then
+    iskilled=$(tail -n 1 /tmp/rp|grep "Exiting")
+    if [ ${#iskilled]} -eq 0 ]; then
+      streamtitle=$(tac /tmp/rp|grep StreamTitle -m 1|sed "s/.*StreamTitle\='//"|sed "s/'.*//")
+      rpinfo="Radio: $streamtitle |" 
+    fi
+  fi
+
   ip=$(ifconfig wlan0 | grep 'inet addr' | sed 's/\s*inet addr://' | sed 's/ .*$//')
   if [ $ip = "" ]
   then
@@ -58,7 +76,8 @@ status() {
 
   TZ="Europe/Istanbul"
 
-	echo -n $mocinfo \
+	echo -n $rpinfo \
+          $mocinfo \
           'IP:' $ip '|' \
           'Wlan0:' $(/sbin/iwconfig wlan0 | sed 's/ /\n/g' | grep Quality) '|' \
           'BAT:' $(acpi| grep 'Battery' | sed 's/Battery\s[0-9]*: //' | sed 's/Discharging, /v/' | sed 's/Charging, /^/' | sed 's/Unknown, //' | sed 's/,.*//') '|' \
