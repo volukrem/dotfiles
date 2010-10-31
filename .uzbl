@@ -1,3 +1,6 @@
+# Example uzbl config. All settings are optional. You can use uzbl without
+# any config at all (but it won't do much).
+
 # === Core settings ==========================================================
 
 # Install location prefix.
@@ -31,7 +34,8 @@ set set_mode        = set mode =
 set set_status      = set status_message =
 
 # Spawn path shortcuts. In spawn the first dir+path match is used in "dir1:dir2:dir3:executable"
-set scripts_dir     = $XDG_DATA_HOME/uzbl:@prefix/share/uzbl/examples/data:scripts
+#set scripts_dir     = $XDG_DATA_HOME/uzbl:@prefix/share/uzbl/examples/data:scripts
+set scripts_dir     = /home/azer/.config/uzbl/scripts
 
 # === Hardcoded handlers =====================================================
 
@@ -44,7 +48,7 @@ set authentication_handler = sync_spawn @scripts_dir/auth.py
 # === Dynamic event handlers =================================================
 
 # Open link in new window
-@on_event   NEW_WINDOW     sh 'uzbl-browser -u "$8"' %r
+@on_event   NEW_WINDOW     sh 'w3 "$8"' %r
 # Open in current window
 #@on_event   NEW_WINDOW     uri %s
 # Open in new tab
@@ -199,11 +203,11 @@ set ebind     = @mode_bind global,-insert
 @cbind  R   = reload_ign_cache
 
 # Zoom binds
-@cbind  +   = zoom_in
-@cbind  -   = zoom_out
-@cbind  T   = toggle_zoom_type
-@cbind  1   = set zoom_level = 1.0
-@cbind  2   = set zoom_level = 2.0
+#@cbind  +   = zoom_in
+#@cbind  -   = zoom_out
+#@cbind  T   = toggle_zoom_type
+#@cbind  1   = set zoom_level = 1.0
+#@cbind  2   = set zoom_level = 2.0
 
 # Appearance binds
 @cbind  t   = toggle_status
@@ -218,13 +222,14 @@ set ebind     = @mode_bind global,-insert
 @cbind  N   = search_reverse
 
 # Web searching binds
-@cbind  \\sw<Search Web:>_         = uri http://s6/search?q=%s
-@cbind  \\su<UbuntuForums:>_   = uri http://s6/search?hl=en&q=site:ubuntuforums.org%20%s&num=100
-@cbind  \\si<Imdb:>_           = uri http://s6/search?q=site:imdb.com%20%s&num=100
-@cbind  \\sl<Linux:>_          = uri http://s6/linux?hl=en&q=%s&num=100
-@cbind  \\sl<StackOverflow:>_  = uri http://s6/search?hl=en&safe=off&num=100&q=site:stackoverflow.com+%s&aq=f&oq=&aqi=
-@cbind  \\sc<Code Search:>_    = uri http://s6/codesearch?hl=en&lr=&q=%s
-@cbind  \\str<Google Turkiye:>_= uri http://s6/search?q=%s&lr=lang_tr
+@cbind  \\sw<Search Web:>_     = uri http://google.com/search?q=%s
+@cbind  \\ddg<Duck Duck Go:>_  = uri http://duckduckgo.com/?q=%s
+@cbind  \\wa<WolframAlpha:>_   = uri http://wolframalpha.com/input/?i=%s
+@cbind  \\su<UbuntuForums:>_   = uri http://google.com/search?hl=en&q=site:ubuntuforums.org%20%s&num=100
+@cbind  \\si<Imdb:>_           = uri http://google.com/search?q=site:imdb.com%20%s&num=100
+@cbind  \\sl<Linux:>_          = uri http://google.com/linux?hl=en&q=%s&num=100
+@cbind  \\sc<Code Search:>_    = uri http://google.com/codesearch?hl=en&lr=&q=%s
+@cbind  \\str<Google Turkiye:>_= uri http://google.com/search?q=%s&lr=lang_tr
 
 @cbind  \\wen<Wikipedia:>_     = uri http://en.wikipedia.org/w/index.php?title=Special:Search&search=%s&go=Go
 @cbind  \\wtr<Vikipedi:>_      = uri http://tr.wikipedia.org/wiki/%s
@@ -234,6 +239,7 @@ set ebind     = @mode_bind global,-insert
 @cbind  \\ds<Search Bookmarks:>_ = uri http://delicious.com/search?p=%s&chk=&context=userposts|xingjiangao&fr=del_icio_us&lc=1
 @cbind  \\db                     = js (function(){location.href='http://delicious.com/save?url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title)+'&v=5&jump=yes'})()
 
+@cbind  \\so<StackOverflow:>_  = uri http://google.com/search?hl=en&safe=off&num=100&q=site:stackoverflow.com+%s&aq=f&oq=&aqi=
 @cbind  \\dict<Dictionary:>_  = uri http://www.google.com/dictionary?langpair=en%7Cen&q=%s&hl=en&aq=f
 @cbind  \\lastfm<Last.FM:>_   = uri http://last.fm/music/%s
 @cbind  \\flickr<Flickr:>_    = uri http://flickr.com/search/?q=%s&m=tags&s=int
@@ -386,6 +392,6 @@ set default_mode = command
 # === Post-load misc commands ================================================
 
 # Set the "home" page.
-set uri = http://y530
+set uri = http://sl510
 
 # vim: set fdm=syntax:
