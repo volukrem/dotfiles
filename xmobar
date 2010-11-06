@@ -9,9 +9,11 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Battery ["-L","15","-H","75","--high","#005500","--normal","#775500", "--low", "#cc0000", "--template", "BAT: <left>"] 100
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Com "get_playing_song" ["-s","-r"] "music" 10
+                    , Run Com "get_battery_status" ["-s","-r"] "bat" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#333333>%cpu%</fc> | <fc=#333333>%memory%</fc> | <fc=#004455>%eth0% - %wlan0%</fc> | <fc=#771100>%date%</fc> | <fc=#333333>%battery%</fc> "
+       , template = " %StdinReader% }{ <fc=#555555>%music%</fc> | <fc=#555555>%cpu%</fc> | <fc=#555555>%memory%</fc> | <fc=#005566>%eth0% - %wlan0%</fc> | <fc=#555555>%bat%</fc> | <fc=#991100>%date%</fc> "
        }
