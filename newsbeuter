@@ -1,0 +1,8 @@
+max-items        100
+browser          w3-nb
+show-read-feeds  no
+
+color listfocus    white   red   bold
+color info         white   default   bold
+color article      white   default
+color listnormal   white   default
