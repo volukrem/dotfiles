@@ -9,10 +9,10 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Battery ["-L","15","-H","75","--high","#005500","--normal","#775500", "--low", "#cc0000", "--template", "BAT: <left>"] 100
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run Com "get_playing_song" ["-s","-r"] "music" 10
-                    , Run Com "get_battery_status" ["-s","-r"] "bat" 10
-                    , Run Com "get_oss_vol" ["-s","-r"] "vol" 10
-                    , Run Com "get_gold_ratio" ["-s","-r"] "gold" 10
+                    , Run Com "playing-song" ["-s","-r"] "music" 10
+                    , Run Com "battery" ["-s","-r"] "bat" 10
+                    , Run Com "oss-vol" ["-s","-r"] "vol" 10
+                    , Run Com "gold-ratio" ["-s","-r"] "gold" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
