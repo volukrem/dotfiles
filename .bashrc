@@ -1,8 +1,9 @@
 PS1='\[\e[0;31m\]\u@\h\[\e[m\]\[\e[0;37m\]:\[\e[m\]\[\e[1;32m\]\w\[\e[m\]\[\e[0;37m\]\$ \[\e[m\]\[\e[0;37m\]'
 export TERM=xterm-256color
-export PATH=$PATH:"$HOME/.local/bin"
 export PATH=$PATH:~/opt/leiningen
+export PATH=$PATH:~/opt/neo4j/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin/
+export BROWSER="delicious-surf"
 
 # ALIASES
 alias ls='ls -aG'
@@ -18,8 +19,8 @@ alias vi='vim'
 calc(){ awk "BEGIN{ print $* }" ;}
 
 # JAVA
-JAVA_HOME="/opt/java"
-export JAVA_HOME
+export JAVA_HOME="/opt/java"
+export NEO4J_HOME="$HOME/opt/neo4j"
 
 # CLOJURE
 export CLOJURE_EXT=~/.clojure
@@ -31,5 +32,5 @@ alias clj=clj-env-dir
 export PATH=$PATH:~/opt/android/tools
 export PATH=$PATH:~/opt/android/platform-tools
 
-source ~/.local/bin/bashmarks/bashmarks.sh
-source ~/.local/bin/git-completion.bash
+TZ='US/Pacific'; export TZ
+source /home/azer/.local/bin/config.bash
