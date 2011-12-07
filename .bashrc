@@ -1,4 +1,5 @@
-PS1='\[\e[0;31m\]\u@\h\[\e[m\]\[\e[0;37m\]:\[\e[m\]\[\e[1;32m\]\w\[\e[m\]\[\e[0;37m\]\$ \[\e[m\]\[\e[0;37m\]'
+PS1='\[\033[1;31m\]\W/\[\033[0m\] '
+
 export TERM=xterm-256color
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin
@@ -33,4 +34,3 @@ export PATH=$PATH:~/opt/android/tools
 export PATH=$PATH:~/opt/android/platform-tools
 
 TZ='US/Pacific'; export TZ
-source /home/azer/.local/bin/config.bash
