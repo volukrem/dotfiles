@@ -1,0 +1,138 @@
+# want to give this RSS collection a try? run following command:
+# newsbeuter path_to_this_file
+
+# self-mirror
+http://azer.kodfabrik.com/atom.xml
+
+# daily news
+http://news.ycombinator.com/rss
+http://www.reddit.com/r/programming/.rss
+http://www.reddit.com/r/archlinux/.rss
+http://www.reddit.com/r/linux/.rss
+http://www.reddit.com/r/emacs/.rss
+http://www.reddit.com/r/comics/.rss
+http://www.reddit.com/r/worldnews/.rss
+
+# popular-priority
+http://feeds.delicious.com/v2/rss/tag/javascript
+http://feeds.delicious.com/v2/rss/tag/node
+http://feeds.delicious.com/v2/rss/tag/nodejs
+http://feeds.delicious.com/v2/rss/tag/v8
+http://feeds.delicious.com/v2/rss/tag/npm
+http://feeds.delicious.com/v2/rss/tag/commonjs
+http://feeds.delicious.com/v2/rss/tag/git
+http://feeds.delicious.com/v2/rss/tag/emacs
+http://feeds.delicious.com/v2/rss/tag/orgmode
+http://feeds.delicious.com/v2/rss/tag/bash
+http://feeds.delicious.com/v2/rss/tag/xmonad
+
+# popular-webdev
+http://feeds.delicious.com/v2/rss/tag/webkit
+http://feeds.delicious.com/v2/rss/tag/html5
+http://feeds.delicious.com/v2/rss/tag/css
+http://feeds.delicious.com/v2/rss/tag/webgl
+http://feeds.delicious.com/v2/rss/tag/nginx
+
+# popular-misc
+http://feeds.delicious.com/v2/rss/tag/hack
+http://feeds.delicious.com/v2/rss/tag/hacker
+http://feeds.delicious.com/v2/rss/tag/gif
+http://feeds.delicious.com/v2/rss/tag/humor
+
+# popular-dbms
+http://feeds.delicious.com/v2/rss/tag/mongodb
+http://feeds.delicious.com/v2/rss/tag/couchdb
+http://feeds.delicious.com/v2/rss/tag/neo4j
+http://feeds.delicious.com/v2/rss/tag/redis
+
+# popular-platforms
+http://feeds.delicious.com/v2/rss/tag/linux
+http://feeds.delicious.com/v2/rss/tag/llvm
+http://feeds.delicious.com/v2/rss/tag/chromium
+
+# popular-languages
+http://feeds.delicious.com/v2/rss/tag/clojure
+http://feeds.delicious.com/v2/rss/tag/python
+http://feeds.delicious.com/v2/rss/tag/clisp
+http://feeds.delicious.com/v2/rss/tag/lisp
+http://feeds.delicious.com/v2/rss/tag/ruby
+http://feeds.delicious.com/v2/rss/tag/haskell
+
+# popular-geek
+http://feeds.delicious.com/v2/rss/tag/vim
+http://feeds.delicious.com/v2/rss/tag/xss
+
+# popular-cs
+http://feeds.delicious.com/v2/rss/tag/algorithms
+Http://feeds.delicious.com/v2/rss/tag/datastructures
+http://feeds.delicious.com/v2/rss/tag/softwareengineering
+
+# popular-gadgets
+http://feeds.delicious.com/v2/rss/tag/kindle
+http://feeds.delicious.com/v2/rss/tag/arduino
+http://feeds.delicious.com/v2/rss/tag/android
+
+# popular-science
+http://feeds.delicious.com/v2/rss/tag/astronomy
+http://feeds.delicious.com/v2/rss/tag/science
+http://feeds.delicious.com/v2/rss/tag/math
+http://feeds.delicious.com/v2/rss/tag/photography
+
+# popular-other
+http://feeds.delicious.com/v2/rss/tag/food
+http://feeds.delicious.com/v2/rss/tag/productivity
+http://feeds.delicious.com/v2/rss/tag/habits
+http://feeds.delicious.com/v2/rss/tag/health
+
+# people
+http://paulgraham.com/rss.html
+http://matt.might.net/articles/feed.rss
+http://axisofeval.blogspot.com/feeds/posts/default
+http://joehewitt.com/index.xml
+http://cwilso.com/feed/
+http://feeds.feedburner.com/SoftwareIsHard
+http://almaer.com/blog/index.xml
+http://savas.me/blog/feed/rss
+http://www.azarask.in/blog/feed/
+http://feeds2.feedburner.com/al3x
+http://jng.imagine27.com/feed.rss
+http://feeds2.feedburner.com/lifeisagraph
+http://feeds.feedburner.com/JohnResig
+http://mmcgrana.github.com/atom.xml
+http://feeds2.feedburner.com/catonmat
+http://blog.notdot.net/feeds/atom.xml
+http://daringfireball.net/feeds/
+http://feeds.feedburner.com/tom-preston-werner
+http://feeds.feedburner.com/codinghorror
+http://www.bestinclass.dk/atom.xml
+http://feeds.feedburner.com/PerfectionKills
+http://four.livejournal.com/data/rss
+http://feeds.feedburner.com/paul-irish
+http://nakkaya.com/rss-feed
+http://feeds.simonwillison.net/swn-everything
+http://www.eflorenzano.com/blog/feeds/latestposts/
+http://blog.ianbicking.org/feed/
+http://blog.tlrobinson.net/rss
+http://beltzner.ca/mike/feed/
+http://feeds.feedburner.com/madebynathan
+
+# community
+http://lambda-the-ultimate.org/rss.xml
+http://functionsource.com/feeds/entries
+http://feeds.feedburner.com/dailyjs
+http://feeds.feedburner.com/JavascriptJavascript
+http://calendar.perfplanet.com/feed/
+http://www.thespanner.co.uk/feed/
+http://engineering.twitter.com/feeds/posts/default?alt=rss
+http://ajaxian.com/index.xml
+
+# arstechnica
+http://feeds.arstechnica.com/arstechnica/business/
+http://feeds.arstechnica.com/arstechnica/gadgets/
+http://feeds.arstechnica.com/arstechnica/open-source
+http://feeds.arstechnica.com/arstechnica/science/
+
+# misc
+http://tayfabandista.org/blog/?feed=rss2
+http://bkfst.tumblr.com/rss
+http://greatdictators.tumblr.com/rss
