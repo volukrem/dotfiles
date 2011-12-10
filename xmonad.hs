@@ -19,6 +19,7 @@ import XMonad.Layout.TwoPane
 import XMonad.Layout.MosaicAlt
 import XMonad.Layout.Combo
 import XMonad.Layout.WindowNavigation
+import XMonad.Layout.Cross
 
 import XMonad.Layout.PerWorkspace
 
@@ -30,14 +31,17 @@ myManageHook = composeAll
       className =? "Uzbl-core"        --> doF (W.shift "WWW"),
       className =? "Firefox"          --> doF (W.shift "WWW"),
       className =? "Chromium-browser" --> doF (W.shift "WWW"),
-      className =? "Pidgin"           --> doF (W.shift "IRC"),
-      className =? "Skype"            --> doF (W.shift "IRC"),
-      className =? "Vlc"              --> doF (W.shift "5")
-    ] 
+      className =? "Vlc"              --> doF (W.shift "2"),
+      className =? "VirtualBox"       --> doF (W.shift "6")
+      className =? "vboxmanage"       --> doF (W.shift "6")
+      className =? "virtualbox"       --> doF (W.shift "6")
+    ]
 
-myKeys = 
-    [ 
-      ((modMask, xK_s), search)
+myKeys =
+    [
+      ((mod4Mask, xK_p), spawn "dmenu_run"),
+      ((mod4Mask, xK_b), spawn "delicious-surf-bookmarks"),
+      ((mod4Mask, xK_g), spawn "delicious-surf-history")
        -- multimedia keys
        -- XF86AudioLowerVolume
        , ((0            , 0x1008ff11), spawn "ossmix -- vmix0-outvol -2")
@@ -51,46 +55,46 @@ myKeys =
        , ((0            , 0x1008ff16), spawn "mocp -r")
        -- XF86AudioPlay
        , ((0            , 0x1008ff14), spawn "mocp -G")
-    ]
-    where modMask     = mod1Mask
-          modShft     = modMask .|. shiftMask
-          modCtrl     = modMask .|. controlMask
-          modShCr     = modMask .|. shiftMask .|. controlMask
-          modMod2     = mod2Mask
-          modM1Cr     = modMask .|. mod2Mask .|. controlMask
-          search      = SM.submap $ searchMap $ S.promptSearch P.defaultXPConfig
-          nilMask     = 0
-          jstShft     = shiftMask
-          searchMap m = M.fromList $
-              [ ((nilMask, xK_g), m S.google),
-                ((nilMask, xK_w), m S.wikipedia),
-                ((nilMask, xK_i), m S.imdb)
-              ]
+    ]
+    where modMask     = mod1Mask
+          modShft     = modMask .|. shiftMask
+          modCtrl     = modMask .|. controlMask
+          modShCr     = modMask .|. shiftMask .|. controlMask
+          modMod2     = mod2Mask
+          modM1Cr     = modMask .|. mod2Mask .|. controlMask
+          search      = SM.submap $ searchMap $ S.promptSearch P.defaultXPConfig
+          nilMask     = 0
+          jstShft     = shiftMask
+          searchMap m = M.fromList $
+              [ ((nilMask, xK_g), m S.google),
+                ((nilMask, xK_w), m S.wikipedia),
+                ((nilMask, xK_i), m S.imdb)
+              ]
 
 myTabConfig = defaultTheme { inactiveColor = "#050505", activeColor = "#050505",  inactiveBorderColor = "#050505", inactiveTextColor = "#666666", activeBorderColor = "#050505", activeTextColor = "#eeeeee"}
 
 main = do
     putEnv "BROWSER=w3"
-    xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobar"
-    xmonad $ defaultConfig { 
+    xmproc <- spawnPipe "xmobar $HOME/.config/dotfiles/xmobar"
+    xmonad $ defaultConfig {
         -- basic conf
         modMask            = mod4Mask,
         terminal           = "urxvt",
         borderWidth        = 2,
-        workspaces         = ["HOME","DEV","IRC","WWW"] ++ map show [5..9],
+        workspaces         = ["HOME","WWW"] ++ map show [3..9],
         -- colors
-        normalBorderColor  = "#000000",
+        normalBorderColor  = "#222222",
         focusedBorderColor = "#000000",
         -- hooks
         manageHook = myManageHook <+> manageDocks,
         -- layoutHook = avoidStruts $ layoutHook defaultConfig,
-        layoutHook      = windowNavigation $ (avoidStruts (tall ||| Mirror tall ||| noBorders (tabbed shrinkText myTabConfig) ||| noBorders Full ||| onWorkspace "WWW" (tabbed shrinkText myTabConfig) tall)),
+        layoutHook      = windowNavigation $ (avoidStruts (tall ||| Mirror tall ||| noBorders (tabbed shrinkText myTabConfig) ||| noBorders Full ||| onWorkspace "WWW" (tabbed shrinkText myTabConfig) tall)) ||| simpleCross,
         logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
-                        } 
+                        }
         } `additionalKeys` myKeys
-        where 
+        where
           tall  = Tall 1 (3/100) (488/792)
           -- mosaic  = MosaicAlt M.empty
           -- combo   = combineTwo (TwoPane 0.03 (3/10)) (mosaic) (Full)
