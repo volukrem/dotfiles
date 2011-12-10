@@ -1,4 +1,4 @@
-PS1='\[\033[1;31m\]\W/\[\033[0m\] '
+PS1='\[\033[1;31m\]\W \[\e[m\]\[\e[0;37m\] '
 
 export TERM=xterm-256color
 export PATH=$PATH:~/opt/leiningen
