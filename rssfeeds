@@ -4,14 +4,20 @@
 # self-mirror
 http://azer.kodfabrik.com/atom.xml
 
+# literature
+http://www.afilifilintalar.com/feed
+http://cyberzenarchy.wordpress.com/comments/feed/
+
 # daily news
 http://news.ycombinator.com/rss
-http://www.reddit.com/r/programming/.rss
-http://www.reddit.com/r/archlinux/.rss
-http://www.reddit.com/r/linux/.rss
-http://www.reddit.com/r/emacs/.rss
-http://www.reddit.com/r/comics/.rss
-http://www.reddit.com/r/worldnews/.rss
+http://www.reddit.com/r/programming/hot/.rss
+http://www.reddit.com/r/archlinux/hot/.rss
+http://www.reddit.com/r/linux/hot/.rss
+http://www.reddit.com/r/emacs/hot/.rss
+http://www.reddit.com/r/comics/hot/.rss
+http://www.reddit.com/r/worldnews/hot/.rss
+http://www.reddit.com/r/earthporn/hot/.rss
+http://www.reddit.com/r/astronomy/hot/.rss
 
 # popular-priority
 http://feeds.delicious.com/v2/rss/tag/javascript
