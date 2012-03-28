@@ -4,7 +4,7 @@ URxvt.internalBorder:      4
 URxvt.externalBorder:      0
 URxvt.highlightSelection:  true
 URxvt.letterSpace: 0
-URxvt.lineSpace: 3
+URxvt.lineSpace: 4
 URxvt.loginShell: true
 
 URxvt.font: xft:Inconsolata:pixelsize=14:dpi=32

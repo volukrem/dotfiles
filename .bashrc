@@ -8,7 +8,8 @@ purple='\e[0;35m'
 cyan='\e[0;36m'
 white='\e[0;37m'
 
-PS1="\[${yellow}\]\W\[${red}\]\$(__git_ps1)\[${color_off}\] "
+#PS1="\[${yellow}\]\W\[${red}\]\$(__git_ps1) \[${green}\]> \[${color_off}\]"
+PS1="\[${green}\]> \[${color_off}\]"
 
 export TERM=xterm-256color
 export PATH=$PATH:~/opt/leiningen
