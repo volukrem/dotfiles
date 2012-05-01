@@ -3,17 +3,17 @@
 	name = E.Azer Koçulu
 
 [alias]
-  t-server          = utf8
-        st          = status
-        ci          = commit
-        co          = checkout
-        br          = branch
-        lg          = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-        fix         = commit --amend -C HEAD
-        staged      = diff --cached
-        unstage     = reset HEAD
-        undo-commit = reset --soft HEAD^
-
+  t-server              = utf8
+        st              = status
+        ci              = commit
+        co              = checkout
+        br              = branch
+        lg              = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        fix             = commit --amend -C HEAD
+        staged          = diff --cached
+        unstage         = reset HEAD
+        undo-commit     = reset --soft HEAD^
+        reset-to-remote = reset --hard origin/master
 
 [merge]
   tool = opendiff
@@ -36,3 +36,5 @@
         added = yellow
         changed = green
         untracked = cyan
+[github]
+	user = azer
