@@ -12,11 +12,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Com "playing-song" ["-s","-r"] "music" 10
                     , Run Com "battery" ["-s","-r"] "bat" 10
                     , Run Com "oss-vol" ["-s","-r"] "vol" 10
-                    , Run Com "gold-ratio" ["-s","-r"] "gold" 10
                     , Run Com "connection-xmobar-widget" ["-s","-r"] "conn" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#555555>%gold%</fc> | <fc=#555555>%music%</fc> | <fc=#555555>%vol%</fc> | <fc=#555555>%cpu%</fc> | <fc=#555555>%memory%</fc> | <fc=#555555>%bat%</fc> | <fc=#555555>%conn%</fc> | <fc=#991100>%date%</fc> "
-       }
+       , template = " %StdinReader% }{ <fc=#555555>%music%</fc> | <fc=#555555>%vol%</fc> | <fc=#555555>%cpu%</fc> | <fc=#555555>%memory%</fc> | <fc=#555555>%bat%</fc> | <fc=#555555>%conn%</fc> | <fc=#991100>%date%</fc> "
