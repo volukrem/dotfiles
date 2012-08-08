@@ -12,6 +12,7 @@ white='\e[0;37m'
 PS1="\[${green}\]> \[${color_off}\]"
 
 export TERM=xterm-256color
+export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin/
