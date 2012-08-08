@@ -20,7 +20,7 @@ URxvt.matcher.button: 1
 !URxvt*background: rgba:0000/0000/0000/cccc
 
 URxvt.transparent:true
-URxvt.shading: 13
+URxvt.shading: 14
 
 Urxvt.secondaryScroll:  true
 
@@ -81,3 +81,7 @@ URxvt*underlineColor: #c5f779
 !white
 *color7:  #dddddd
 *color15: #dddddd
+
+dzen2.font:       -*-fixed-*-*-*-*-*-*-*-*-*-*-*-*
+dzen2.foreground: #22EE11
+dzen2.background: black
