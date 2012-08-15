@@ -9,14 +9,16 @@ cyan='\e[0;36m'
 white='\e[0;37m'
 
 #PS1="\[${yellow}\]\W\[${red}\]\$(__git_ps1) \[${green}\]> \[${color_off}\]"
-PS1="\[${green}\]> \[${color_off}\]"
+PS1="\[${green}\]λ \[${color_off}\]  "
 
-export TERM=xterm-256color
+export TERM=rxvt-unicode
 export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin/
 export BROWSER="delicious-surf"
+export LANG=en_US.UTF-8
+export LC_MESSAGES="C"
 
 # ALIASES
 alias ls='ls -aG'
