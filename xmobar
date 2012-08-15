@@ -1,6 +1,6 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-       , bgColor = "black"
-       , fgColor = "grey"
+Config { font = "xft:terminus:size=8:antialias=true"
+       , bgColor = "#000"
+       , fgColor = "#fff"
        , position = Top
        , lowerOnStart = True
        , commands = [  Run Com "playing-song" ["-s","-r"] "music" 10
@@ -12,5 +12,5 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#555555>%music%</fc> %conn% | <fc=#555555>%bat%</fc> | <fc=#991100>%now%</fc> "
+       , template = " %StdinReader% }{ <fc=#555555>%music%</fc> %vol% %conn% | <fc=#555555>%bat%</fc> | <fc=#fff>%now%</fc> "
        }
