@@ -1,24 +1,24 @@
-color_off='\e[0m'
-black='\e[0;30m'
-red='\e[0;31m'
-green='\e[0;32m'
-yellow='\e[0;33m'
-blue='\e[0;34m'
-purple='\e[0;35m'
-cyan='\e[0;36m'
-white='\e[0;37m'
 
-#PS1="\[${yellow}\]\W\[${red}\]\$(__git_ps1) \[${green}\]> \[${color_off}\]"
-PS1="\[${green}\]λ \[${color_off}\]  "
+#plugins=(archlinux npm lein)
 
-export TERM=rxvt-unicode
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+source $ZSH/oh-my-zsh.sh
+
+PS1="  %{$fg[white]%}λ%{$reset_color%}  "
+
+export TERM="rxvt-unicode"
+export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin/
 export BROWSER="delicious-surf"
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export LC_MESSAGES="C"
+
+
 
 # ALIASES
 alias ls='ls -aG'

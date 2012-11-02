@@ -1,21 +1,16 @@
-Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
-       , bgColor = "black"
-       , fgColor = "grey"
-       , position = TopW L 100
-       , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","#007700","--high","#771100"] 10
-                    , Run Network "wlan0" ["-L","0","-H","100","--normal","#007700","--high","#771100"] 10
-                    , Run Cpu ["-L","3","-H","50","--normal","#007700","--high","#771100"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Battery ["-L","15","-H","75","--high","#005500","--normal","#775500", "--low", "#cc0000", "--template", "BAT: <left>"] 100
-                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run Com "playing-song" ["-s","-r"] "music" 10
-                    , Run Com "battery" ["-s","-r"] "bat" 10
+Config { font = "xft:terminus:size=8:antialias=true"
+       , bgColor = "#000"
+       , fgColor = "#fff"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [  Run Com "playing-song" ["-s","-r"] "music" 10
+                    , Run Com "xmobar-battery-widget" ["-s","-r"] "bat" 10
                     , Run Com "oss-vol" ["-s","-r"] "vol" 10
-                    , Run Com "gold-ratio" ["-s","-r"] "gold" 10
-                    , Run Com "connection-existence" ["-s","-r"] "conn" 10
+                    , Run Com "now" ["-s","-r"] "now" 10
+                    , Run Com "xmobar-connection-widget" ["-s","-r"] "conn" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#555555>%gold%</fc> | <fc=#555555>%music%</fc> | <fc=#555555>%eth0%/%wlan0%/%conn%</fc> | <fc=#555555>%vol%</fc> | <fc=#555555>%cpu%</fc> | <fc=#555555>%memory%</fc> | <fc=#555555>%bat%</fc> | <fc=#991100>%date%</fc> "
+       , template = " %StdinReader% }{ <fc=#555555>%music%</fc> %vol% %conn% | <fc=#555555>%bat%</fc> | <fc=#fff>%now%</fc> "
        }
