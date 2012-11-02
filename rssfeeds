@@ -3,6 +3,8 @@
 # self-mirror
 http://azer.kodfabrik.com/atom.xml azer+rss+myself@kodfabrik.com
 
+http://www.archlinux.org/feeds/news/ azer+rss+myself+archlinux@kodfabrik.com
+
 # literature
 http://www.afilifilintalar.com/feed azer+rss+literature@kodfabrik.com
 http://cyberzenarchy.wordpress.com/comments/feed/ azer+rss+beat@kodfabrik.com
@@ -13,82 +15,65 @@ http://www.reddit.com/r/programming/hot/.rss azer+rss+programming@kodfabrik.com
 http://www.reddit.com/r/archlinux/hot/.rss azer+rss+linux@kodfabrik.com
 http://www.reddit.com/r/linux/hot/.rss azer+rss+linux@kodfabrik.com
 http://www.reddit.com/r/emacs/hot/.rss azer+rss+emacs@kodfabrik.com
-http://www.reddit.com/r/comics/hot/.rss azer+rss+humor@kodfabrik.com
 http://www.reddit.com/r/worldnews/hot/.rss azer+rss+news@kodfabrik.com
 http://www.reddit.com/r/earthporn/hot/.rss azer+rss+pics@kodfabrik.com
 http://www.reddit.com/r/astronomy/hot/.rss azer+rss+astronomy@kodfabrik.com
 
 # popular-priority
-http://feeds.delicious.com/v2/rss/tag/javascript azer+rss+webdev@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/node azer+rss+nodejs@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/nodejs azer+rss+nodejs@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/v8 azer+rss+js@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/npm azer+rss+js@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/commonjs azer+rss+js@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/git azer+rss+git@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/emacs azer+rss+emacs@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/orgmode azer+rss+org@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/bash azer+rss+linux@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/xmonad azer+rss+xmonad@kodfabrik.com
+http://feeds.pinboard.in/rss/t:nodejs azer+rss+nodejs@kodfabrik.com
+http://feeds.pinboard.in/rss/t:git azer+rss+git@kodfabrik.com
+http://feeds.pinboard.in/rss/t:emacs azer+rss+emacs@kodfabrik.com
+http://feeds.pinboard.in/rss/t:orgmode azer+rss+org@kodfabrik.com
+http://feeds.pinboard.in/rss/t:bash azer+rss+linux@kodfabrik.com
+http://feeds.pinboard.in/rss/t:xmonad azer+rss+xmonad@kodfabrik.com
 
 # popular-webdev
-http://feeds.delicious.com/v2/rss/tag/webkit azer+rss+webdev@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/html5 azer+rss+webdev@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/css azer+rss+webdev@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/webgl azer+rss+webdev@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/nginx azer+rss+nginx@kodfabrik.com
+http://feeds.pinboard.in/rss/t:webkit azer+rss+webdev@kodfabrik.com
+http://feeds.pinboard.in/rss/t:html5 azer+rss+webdev@kodfabrik.com
+http://feeds.pinboard.in/rss/t:css3 azer+rss+webdev@kodfabrik.com
+http://feeds.pinboard.in/rss/t:webgl azer+rss+webdev@kodfabrik.com
+http://feeds.pinboard.in/rss/t:nginx azer+rss+nginx@kodfabrik.com
 
 # popular-misc
-http://feeds.delicious.com/v2/rss/tag/hack azer+rss+hack@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/hacker azer+rss+hack@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/gif azer+rss+humor@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/humor azer+rss+humor@kodfabrik.com
+http://feeds.pinboard.in/rss/t:hack azer+rss+hack@kodfabrik.com
+http://feeds.pinboard.in/rss/t:hacker azer+rss+hack@kodfabrik.com
 
 # popular-dbms
-http://feeds.delicious.com/v2/rss/tag/mongodb azer+rss+mongodb@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/neo4j azer+rss+neo4j@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/redis azer+rss+redis@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/couchdb azer+rss+dbms@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/postgresql azer+rss+dbms@kodfabrik.com
+http://feeds.pinboard.in/rss/t:mongodb azer+rss+mongodb@kodfabrik.com
+http://feeds.pinboard.in/rss/t:neo4j azer+rss+neo4j@kodfabrik.com
+http://feeds.pinboard.in/rss/t:redis azer+rss+redis@kodfabrik.com
 
 # popular-platforms
-http://feeds.delicious.com/v2/rss/tag/linux azer+rss+linux@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/llvm azer+rss+vm@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/chromium azer+rss+browsers@kodfabrik.com
+http://feeds.pinboard.in/rss/t:linux azer+rss+linux@kodfabrik.com
+http://feeds.pinboard.in/rss/t:llvm azer+rss+vm@kodfabrik.com
+http://feeds.pinboard.in/rss/t:chromium azer+rss+browsers@kodfabrik.com
 
 # popular-languages
-http://feeds.delicious.com/v2/rss/tag/clojure azer+rss+clojure@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/python azer+rss+languages@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/clisp azer+rss+languages@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/lisp azer+rss+languages@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/ruby azer+rss+languages@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/haskell azer+rss+languages@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/lua azer+rss+languages@kodfabrik.com
+http://feeds.pinboard.in/rss/t:clojure azer+rss+clojure@kodfabrik.com
+http://feeds.pinboard.in/rss/t:python azer+rss+languages@kodfabrik.com
+http://feeds.pinboard.in/rss/t:clisp azer+rss+languages@kodfabrik.com
+http://feeds.pinboard.in/rss/t:lisp azer+rss+languages@kodfabrik.com
+http://feeds.pinboard.in/rss/t:ruby azer+rss+languages@kodfabrik.com
+http://feeds.pinboard.in/rss/t:haskell azer+rss+languages@kodfabrik.com
+http://feeds.pinboard.in/rss/t:lua azer+rss+languages@kodfabrik.com
 
 # popular-geek
-http://feeds.delicious.com/v2/rss/tag/vim azer+rss+vim@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/xss azer+rss+xss@kodfabrik.com
+http://feeds.pinboard.in/rss/t:vim azer+rss+vim@kodfabrik.com
+http://feeds.pinboard.in/rss/t:xss azer+rss+xss@kodfabrik.com
 
 # popular-cs
-http://feeds.delicious.com/v2/rss/tag/algorithms azer+rss+cs@kodfabrik.com
-Http://feeds.delicious.com/v2/rss/tag/datastructures azer+rss+cs@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/softwareengineering azer+rss+cs@kodfabrik.com
+http://feeds.pinboard.in/rss/t:algorithms azer+rss+cs@kodfabrik.com
+Http://feeds.pinboard.in/rss/t:datastructures azer+rss+cs@kodfabrik.com
+http://feeds.pinboard.in/rss/t:softwareengineering azer+rss+cs@kodfabrik.com
 
 # popular-gadgets
-http://feeds.delicious.com/v2/rss/tag/kindle azer+rss+gadgets@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/arduino azer+rss+gadgets@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/android azer+rss+gadgets@kodfabrik.com
+http://feeds.pinboard.in/rss/t:kindle azer+rss+gadgets@kodfabrik.com
+http://feeds.pinboard.in/rss/t:arduino azer+rss+gadgets@kodfabrik.com
+http://feeds.pinboard.in/rss/t:android azer+rss+gadgets@kodfabrik.com
 
 # popular-science
-http://feeds.delicious.com/v2/rss/tag/astronomy azer+rss+astronomy@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/science azer+rss+science@kodfabrik.com
-
-# popular-other
-http://feeds.delicious.com/v2/rss/tag/photography azer+rss+photography@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/food azer+rss+misc@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/productivity azer+rss+misc@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/habits azer+rss+misc@kodfabrik.com
-http://feeds.delicious.com/v2/rss/tag/health azer+rss+misc@kodfabrik.com
+http://feeds.pinboard.in/rss/t:astronomy azer+rss+astronomy@kodfabrik.com
+http://feeds.pinboard.in/rss/t:science azer+rss+science@kodfabrik.com
 
 # people
 http://www.aaronsw.com/2002/feeds/pgessays.rss azer+rss+people@kodfabrik.com
@@ -100,14 +85,14 @@ http://feeds.feedburner.com/SoftwareIsHard azer+rss+people@kodfabrik.com
 http://almaer.com/blog/index.xml azer+rss+people@kodfabrik.com
 http://savas.me/blog/feed/rss azer+rss+people@kodfabrik.com
 http://www.azarask.in/blog/feed/ azer+rss+people@kodfabrik.com
-http://feeds2.feedburner.com/al3x azer+rss+people@kodfabrik.com
+http://al3x.net/atom.xml azer+rss+people@kodfabrik.com
 http://jng.imagine27.com/feed.rss azer+rss+people@kodfabrik.com
 http://feeds2.feedburner.com/lifeisagraph azer+rss+people@kodfabrik.com
 http://feeds.feedburner.com/JohnResig azer+rss+people@kodfabrik.com
 http://mmcgrana.github.com/atom.xml azer+rss+people@kodfabrik.com
 http://feeds2.feedburner.com/catonmat azer+rss+people@kodfabrik.com
 http://blog.notdot.net/feeds/atom.xml azer+rss+people@kodfabrik.com
-http://daringfireball.net/feeds/ azer+rss+people@kodfabrik.com
+http://daringfireball.net/feeds/articles azer+rss+people@kodfabrik.com
 http://feeds.feedburner.com/tom-preston-werner azer+rss+people@kodfabrik.com
 http://feeds.feedburner.com/codinghorror azer+rss+people@kodfabrik.com
 http://www.bestinclass.dk/atom.xml azer+rss+people@kodfabrik.com
@@ -116,9 +101,7 @@ http://four.livejournal.com/data/rss azer+rss+people@kodfabrik.com
 http://feeds.feedburner.com/paul-irish azer+rss+people@kodfabrik.com
 http://nakkaya.com/rss-feed azer+rss+people@kodfabrik.com
 http://feeds.simonwillison.net/swn-everything azer+rss+people@kodfabrik.com
-http://www.eflorenzano.com/blog/feeds/latestposts/ azer+rss+people@kodfabrik.com
 http://blog.ianbicking.org/feed/ azer+rss+people@kodfabrik.com
-http://blog.tlrobinson.net/rss azer+rss+people@kodfabrik.com
 http://beltzner.ca/mike/feed/ azer+rss+people@kodfabrik.com
 http://feeds.feedburner.com/madebynathan azer+rss+people@kodfabrik.com
 
