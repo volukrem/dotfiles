@@ -9,9 +9,9 @@ cyan='\e[0;36m'
 white='\e[0;37m'
 
 #PS1="\[${yellow}\]\W\[${red}\]\$(__git_ps1) \[${green}\]> \[${color_off}\]"
-PS1="\[${green}\]λ \[${color_off}\]  "
+PS1="  \[${green}\]λ \[${color_off}\]  "
 
-export TERM=rxvt-unicode
+export TERM=xterm
 export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin

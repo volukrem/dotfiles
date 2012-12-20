@@ -7,7 +7,9 @@ source $ZSH/oh-my-zsh.sh
 
 PS1="  %{$fg[white]%}λ%{$reset_color%}  "
 
-export TERM="rxvt-unicode"
+unsetopt correct_all
+
+export TERM="xterm"
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
@@ -17,8 +19,7 @@ export BROWSER="delicious-surf"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_MESSAGES="C"
-
-
+export NODE_NO_READLINE=1
 
 # ALIASES
 alias ls='ls -aG'
@@ -27,7 +28,6 @@ alias cp='cp -v -i'
 alias mv='mv -v -i'
 alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
-
 alias vi='vim'
 
 # FUNCTIONS

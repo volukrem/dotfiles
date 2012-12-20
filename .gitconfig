@@ -4,6 +4,8 @@
 
 [alias]
   t-server              = utf8
+        pl              = pull
+        ph              = push
         st              = status
         ci              = commit
         co              = checkout
@@ -13,7 +15,8 @@
         staged          = diff --cached
         unstage         = reset HEAD
         undo-commit     = reset --soft HEAD^
-        reset-to-remote = reset --hard origin/master
+        reset-master    = reset --hard origin/master
+        reset-staging   = reset --hard origin/staging
 
 [merge]
   tool = opendiff
