@@ -9,8 +9,8 @@ PS1="  %{$fg[white]%}λ%{$reset_color%}  "
 
 unsetopt correct_all
 
-export TERM="xterm"
-export PATH=$PATH:~/.local/bin
+export TERM="xterm-256color"
+export PATH=$PATH:~/localbin
 export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin
@@ -23,9 +23,6 @@ export NODE_NO_READLINE=1
 
 # ALIASES
 alias ls='ls -aG'
-alias rm='rm -v -i'
-alias cp='cp -v -i'
-alias mv='mv -v -i'
 alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
 alias vi='vim'
@@ -48,3 +45,4 @@ export PATH=$PATH:~/opt/android/tools
 export PATH=$PATH:~/opt/android/platform-tools
 
 TZ='US/Pacific'; export TZ
+
