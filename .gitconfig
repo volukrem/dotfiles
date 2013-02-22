@@ -4,8 +4,10 @@
 
 [alias]
   t-server              = utf8
-        pl              = pull
-        ph              = push
+        pb              = pull
+        p               = pull --rebase origin master
+        u               = push origin master
+        ub              = push 
         st              = status
         ci              = commit
         co              = checkout

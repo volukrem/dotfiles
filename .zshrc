@@ -19,7 +19,7 @@ export BROWSER="delicious-surf"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_MESSAGES="C"
-export NODE_NO_READLINE=1
+#export NODE_NO_READLINE=1
 
 # ALIASES
 alias ls='ls -aG'
