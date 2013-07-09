@@ -9,12 +9,16 @@ PS1="  %{$fg[white]%}λ%{$reset_color%}  "
 
 unsetopt correct_all
 
+export GOPATH=$HOME/dev/golang
+export PATH=$PATH:$GOPATH/bin
+
 export TERM="xterm-256color"
-export PATH=$PATH:~/localbin
+export PATH=~/localbin:$PATH
 export PATH=$PATH:~/.node_modules/.bin
 export PATH=$PATH:~/opt/leiningen
 export PATH=$PATH:~/opt/neo4j/bin
 export PATH=$PATH:/var/lib/gems/1.8/bin/
+export PATH=$PATH:~/.gem/ruby/2.0.0/bin/
 export BROWSER="delicious-surf"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -26,6 +30,7 @@ alias ls='ls -aG'
 alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
 alias vi='vim'
+alias c='clear; pwd'
 
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
