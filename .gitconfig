@@ -14,6 +14,8 @@
         br              = branch
         lg              = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
         fix             = commit --amend -C HEAD
+        rv              = remote --verbose
+        r               = remote
         staged          = diff --cached
         unstage         = reset HEAD
         undo-commit     = reset --soft HEAD^
