@@ -50,4 +50,3 @@ export PATH=$PATH:~/opt/android/tools
 export PATH=$PATH:~/opt/android/platform-tools
 
 TZ='US/Pacific'; export TZ
-
