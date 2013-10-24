@@ -9,6 +9,8 @@ PS1="  %{$fg[white]%}λ%{$reset_color%}  "
 
 unsetopt correct_all
 
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/dev/golang
 export PATH=$PATH:$GOPATH/bin
 
@@ -31,6 +33,7 @@ alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
 alias vi='vim'
 alias c='clear; pwd'
+alias git=hub
 
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
@@ -50,3 +53,4 @@ export PATH=$PATH:~/opt/android/tools
 export PATH=$PATH:~/opt/android/platform-tools
 
 TZ='US/Pacific'; export TZ
+
