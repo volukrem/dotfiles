@@ -28,7 +28,7 @@ localbin:
 	cd ~/localbin && make
 
 install:
-	apt-get install curl wget git rubygems tmux zsh mercurial bison
+	brew install curl wget git tmux zsh
 
 zsh:
 	cd ~ && curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
