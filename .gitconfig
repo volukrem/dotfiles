@@ -46,3 +46,8 @@
         untracked = cyan
 [github]
 	user = azer
+[core]
+	editor = /usr/bin/vim
+
+[help]
+  autocorrect = 1
