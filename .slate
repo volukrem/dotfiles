@@ -5,16 +5,11 @@ config resizePercentOf screenSize
 config secondsBetweenRepeat 0.1
 config checkDefaultsOnLoad true
 config focusCheckWidthMax 3000
-config keyboardLayout dvorak
 config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 #config windowHintsDuration 5
 config windowHintsSpread true
 #config windowHintsOrder persist
-
-# Monitor Aliases
-alias mon-macbook      0
-alias mon-display    1
 
 # Misc Aliases
 alias showHintsLeftHand hint AOEUIYQJKX
@@ -24,61 +19,36 @@ alias editor 'Emacs'
 
 # Abstract positions
 alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
 alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
 alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
 alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
 alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
 alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
-# Concrete positions
-alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-macbook}
-alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-macbook}
-alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-macbook}
-alias 1-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-macbook}
-alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-display}
-alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-display}
-alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-display}
-alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-display}
+alias right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias leftbottom move screenOriginX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
+alias lefttop    move screenOriginX/2;screenOriginY screenSizeX/2;screenSizeY/2
+alias rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
+alias righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2
 
-# 2 Monitor layout
-layout 2monitors 'iTerm':MAIN_FIRST                       ${2-left} | ${1-left}
-layout 2monitors 'Safari':REPEAT                          ${2-right}
-layout 2monitors 'Google Chrome':REPEAT                          ${2-right}
-layout 2monitors 'Slack':MAIN_FIRST                        ${1-left}
-layout 2monitors 'Mailbox':MAIN_FIRST                        ${1-right}
-layout 2monitors 'Path Finder':MAIN_FIRST                 ${2-right}
+layout code 'iTerm':MAIN_FIRST                    ${full}
 
-# 1 Monitor layout
-layout 1monitor 'iTerm':MAIN_FIRST                       ${1-right}
-layout 1monitor 'Sublime Text 2':MAIN_FIRST              ${1-left}
-layout 1monitor 'MacVim':MAIN_FIRST                      ${1-left}
-layout 1monitor 'Safari':REPEAT                          ${1-full}
-layout 1monitor 'Nightly':REPEAT                          ${1-full}
-layout 1monitor 'Mail':MAIN_FIRST                        ${1-full}
-layout 1monitor 'Path Finder':MAIN_FIRST                 ${1-full}
-layout 1monitor 'Xcode':REPEAT                           ${1-full}
-layout 1monitor 'Eclipse':REPEAT                         ${1-full}
-layout 1monitor 'iTunes':REPEAT                          ${1-full}
+layout browse 'Google Chrome':MAIN_FIRST          ${full}
 
-# Default Layouts
-default 2monitors resolutions:${mon-macbook};${mon-display};
-default 1monitor  resolutions:${mon-macbook}
+layout codeAndBrowse 'iTerm':MAIN_FIRST           ${left}
+layout codeAndBrowse 'Google Chrome':MAIN_FIRST   ${right}
 
-# Numpad location Bindings
-bind pad0 ${showHintsLeftHand}
-bind pad1 ${leftless}
-bind pad2 push bottom bar-resize:screenSizeY/2
-bind pad3 ${rightless}
-bind pad4 ${lefthalf}
-bind pad5 ${full}
-bind pad6 ${righthalf}
-bind pad7 ${leftmost}
-bind pad8 push top bar-resize:screenSizeY/2
-bind pad9 ${rightmost}
-bind padEnter grid padding:5 ${mon-macbook}:6,2 ${mon-display}:8,3
-bind pad+ throw next
-bind pad. focus behind
-bind pad* layout 2monitors
+layout codeAndRead 'iTerm':MAIN_FIRST             ${left}
+layout codeAndRead 'Dash':MAIN_FIRST              ${right}
+
+layout communicate 'Slack':MAIN_FIRST             ${left}
+layout communicate 'Mailbox':MAIN_FIRST           ${right}
+
+layout overview 'Slack':MAIN_FIRST                ${righttop}
+layout overview 'Mailbox':MAIN_FIRST              ${rightbottom}
+layout overview 'Google Chrome':MAIN_FIRST        ${lefttop}
+layout overview 'iTerm':MAIN_FIRST                ${leftbottom}
 
 bind e:cmd  ${showNormalHint}
 
@@ -87,7 +57,14 @@ bind e:cmd  ${showNormalHint}
 # ======================================
 
 alias hyper ctrl;shift;alt;cmd
-bind 1:${hyper} layout 2monitors
+
+# Layout bindings
+bind 0:${hyper} sequence layout overview | show 'Slack','Mailbox','Google Chrome','iTerm'
+bind 1:${hyper} sequence layout communicate | show 'Slack','Mailbox' | hide 'iTerm','Google Chrome'
+bind 2:${hyper} sequence layout code | show 'iTerm' | hide all-but:'iTerm'
+bind 3:${hyper} sequence layout browse | show 'Google Chrome' | hide all-but:'Google Chrome'
+bind 4:${hyper} sequence layout codeAndBrowse | show 'Google Chrome','iTerm' | hide 'Slack','Mailbox'
+bind 5:${hyper} sequence layout codeAndRead | show 'iTerm','Dash' | hide 'Slack','Mailbox','Google Chrome'
 
 # Location bindings
 bind t:${hyper} ${lefthalf}
@@ -106,10 +83,6 @@ bind up:${hyper}       focus up
 bind down:${hyper}     focus down
 
 # App bindings
-bind e:${hyper} focus ${browser}
-bind u:${hyper} focus ${editor}
-bind x:${hyper} focus 'Xcode'
-bind g:${hyper} focus 'GitHub'
-bind m:${hyper} focus 'Mail'
-bind i:${hyper} focus 'iTerm'
-bind o:${hyper} focus 'Path Finder'
+bind b:${hyper} focus ${browser}
+bind m:${hyper} focus 'Mailbox'
+bind t:${hyper} focus 'iTerm'
