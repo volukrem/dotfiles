@@ -45,7 +45,8 @@ layout 2monitors 'iTerm':MAIN_FIRST                       ${2-left} | ${1-left}
 layout 2monitors 'Safari':REPEAT                          ${2-right}
 layout 2monitors 'Google Chrome':REPEAT                          ${2-right}
 layout 2monitors 'Slack':MAIN_FIRST                        ${1-left}
-layout 2monitors 'Path Finder':MAIN_FIRST                 ${1-rightbottom}
+layout 2monitors 'Mailbox':MAIN_FIRST                        ${1-right}
+layout 2monitors 'Path Finder':MAIN_FIRST                 ${2-right}
 
 # 1 Monitor layout
 layout 1monitor 'iTerm':MAIN_FIRST                       ${1-right}
