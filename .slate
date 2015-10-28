@@ -32,23 +32,28 @@ alias lefttop    move screenOriginX/2;screenOriginY screenSizeX/2;screenSizeY/2
 alias rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
 alias righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2
 
-layout code 'iTerm':MAIN_FIRST                    ${full}
-
-layout browse 'Google Chrome':MAIN_FIRST          ${full}
-
-layout codeAndBrowse 'iTerm':MAIN_FIRST           ${left}
-layout codeAndBrowse 'Google Chrome':MAIN_FIRST   ${right}
-
-layout codeAndRead 'iTerm':MAIN_FIRST             ${left}
-layout codeAndRead 'Dash':MAIN_FIRST              ${right}
+layout dashboard 'Slack':MAIN_FIRST                ${righttop}
+layout dashboard 'Mailbox':MAIN_FIRST              ${left}
+layout dashboard 'Notes':MAIN_FIRST                ${rightbottom}
 
 layout communicate 'Slack':MAIN_FIRST             ${left}
 layout communicate 'Mailbox':MAIN_FIRST           ${right}
 
-layout overview 'Slack':MAIN_FIRST                ${righttop}
-layout overview 'Mailbox':MAIN_FIRST              ${rightbottom}
-layout overview 'Google Chrome':MAIN_FIRST        ${lefttop}
-layout overview 'iTerm':MAIN_FIRST                ${leftbottom}
+
+layout code 'iTerm':MAIN_FIRST                    ${full}
+layout codeAndBrowse 'iTerm':MAIN_FIRST           ${leftmost}
+layout codeAndBrowse 'Google Chrome':MAIN_FIRST   ${rightless}
+layout codeAndRead 'iTerm':MAIN_FIRST             ${leftmost}
+layout codeAndRead 'Dash':MAIN_FIRST              ${rightless}
+layout codeAndMusic 'Spotify':MAIN_FIRST          ${rightless}
+layout codeAndMusic 'iTerm':MAIN_FIRST            ${leftmost}
+
+layout browse 'Google Chrome':MAIN_FIRST          ${full}
+layout browseAndMusic 'Spotify':MAIN_FIRST        ${rightless}
+layout browseAndMusic 'Google Chrome':MAIN_FIRST  ${leftmost}
+layout browseAndCommunicate 'Google Chrome':MAIN_FIRST      ${left}
+layout browseAndCommunicate 'Slack':MAIN_FIRST      ${righttop}
+layout browseAndCommunicate 'Mailbox':MAIN_FIRST    ${rightbottom}
 
 bind e:cmd  ${showNormalHint}
 
@@ -59,12 +64,15 @@ bind e:cmd  ${showNormalHint}
 alias hyper ctrl;shift;alt;cmd
 
 # Layout bindings
-bind 0:${hyper} sequence layout overview | show 'Slack','Mailbox','Google Chrome','iTerm'
-bind 1:${hyper} sequence layout communicate | show 'Slack','Mailbox' | hide 'iTerm','Google Chrome'
-bind 2:${hyper} sequence layout code | show 'iTerm' | hide all-but:'iTerm'
-bind 3:${hyper} sequence layout browse | show 'Google Chrome' | hide all-but:'Google Chrome'
-bind 4:${hyper} sequence layout codeAndBrowse | show 'Google Chrome','iTerm' | hide 'Slack','Mailbox'
-bind 5:${hyper} sequence layout codeAndRead | show 'iTerm','Dash' | hide 'Slack','Mailbox','Google Chrome'
+bind 0:${hyper} sequence layout dashboard | hide all | show 'Slack','Mailbox','Notes'
+bind 1:${hyper} sequence layout communicate | hide all | show 'Slack','Mailbox'
+bind 2:${hyper} sequence layout code | hide all | show 'iTerm'
+bind 3:${hyper} sequence layout codeAndBrowse | hide all | show 'Google Chrome','iTerm'
+bind 4:${hyper} sequence layout codeAndMusic | hide all | show 'iTerm','Spotify'
+bind 5:${hyper} sequence layout codeAndRead | hide all | show 'iTerm','Dash'
+bind 6:${hyper} sequence layout browse | hide all | show 'Google Chrome'
+bind 7:${hyper} sequence layout browseAndMusic | hide all | show 'Google Chrome','Spotify'
+bind 8:${hyper} sequence layout browseAndCommunicate | hide all | show 'Slack','Mailbox','Google Chrome'
 
 # Location bindings
 bind t:${hyper} ${lefthalf}
