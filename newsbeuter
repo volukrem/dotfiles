@@ -1,6 +1,7 @@
 max-items        100
-browser          w3-nb
+browser          w3m
 show-read-feeds  no
+player           mplayer
 
 color info         white   default   bold
 color article      default   default

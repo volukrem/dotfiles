@@ -27,6 +27,7 @@ alias cp='cp -v -i'
 alias mv='mv -v -i'
 alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
+alias jsh=fab -f ~/src/Jelly/jelly-server/fabfile.py -R $1 ssh:${1//[[:space:]]}
 
 alias vi='vim'
 
