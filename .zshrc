@@ -1,7 +1,5 @@
-#plugins=(archlinux npm lein)
-
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 source $ZSH/oh-my-zsh.sh
 
 
@@ -14,17 +12,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:$PATH
 export GOPATH=$HOME/dev/golang
 export PATH=$PATH:$GOPATH/bin
 
-export TERM="xterm-256color"
+#export TERM=""
 export PATH=~/localbin:$PATH
-export PATH=$PATH:~/.node_modules/.bin
-export PATH=$PATH:~/opt/leiningen
-export PATH=$PATH:~/opt/neo4j/bin
-#export PATH=$PATH:/var/lib/gems/1.8/bin
-#export PATH=$PATH:~/.gem/ruby/2.0.0/bin
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_MESSAGES="C"
-#export NODE_NO_READLINE=1
+export EDITOR=vi
 
 # ALIASES
 alias ls='ls -aG'
@@ -36,24 +29,5 @@ alias c='clear; pwd'
 # FUNCTIONS
 calc(){ awk "BEGIN{ print $* }" ;}
 
-# JAVA
-export JAVA_HOME="/opt/java"
-export NEO4J_HOME="$HOME/opt/neo4j"
-
-# CLOJURE
-export CLOJURE_EXT=~/.clojure
-export PATH=$PATH:~/opt/clojure-contrib/launchers/bash
-export PATH=$PATH:~/opt/leiningen
-alias clj=clj-env-dir
-
-# ANDROID
-export PATH=$PATH:~/opt/android/tools
-export PATH=$PATH:~/opt/android/platform-tools
-
-export BROWSER="/Applications/Google Chrome.app"
 
 TZ='US/Pacific'; export TZ
-
-function jsh() {
-  fab -f ~/src/Jelly/jelly-server/fabfile.py -R $1 ssh:${1//[[:space:]]}
-}

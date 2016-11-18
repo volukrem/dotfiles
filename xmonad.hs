@@ -8,7 +8,7 @@ import System.Posix.Env
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
-import qualified System.IO.UTF8        as U
+--import qualified System.IO.UTF8        as U
 import qualified XMonad.Actions.Search as S
 import qualified XMonad.Actions.Submap as SM
 import qualified XMonad.Prompt         as P
@@ -31,10 +31,7 @@ myManageHook = composeAll
       className =? "delicious-surf"   --> doF (W.shift "www"),
       className =? "Firefox"          --> doF (W.shift "www"),
       className =? "Chromium-browser" --> doF (W.shift "www"),
-      className =? "Vlc"              --> doF (W.shift "play"),
-      className =? "VirtualBox"       --> doF (W.shift "6"),
-      className =? "vboxmanage"       --> doF (W.shift "6"),
-      className =? "virtualbox"       --> doF (W.shift "6")
+      className =? "Vlc"              --> doF (W.shift "play")
     ]
 
 myKeys =
@@ -83,16 +80,16 @@ myTabConfig = defaultTheme { inactiveColor = "#050505", activeColor = "#050505",
 
 main = do
     putEnv "BROWSER=w3"
-    xmproc <- spawnPipe "xmobar $HOME/.config/dotfiles/xmobar"
+    xmproc <- spawnPipe "xmobar $HOME/dotfiles/xmobar"
     xmonad $ defaultConfig {
         -- basic conf
         modMask            = mod4Mask,
-        terminal           = "urxvt",
-        borderWidth        = 3,
-        workspaces         = ["home","dev","www", "test", "play", "beat", "kalkan", "kahire", "bagdat"],
+        terminal           = "pantheon-terminal",
+        borderWidth        = 2,
+        workspaces         = ["home","dev","www", "4", "5", "6", "7", "8", "9"],
         -- colors
-        normalBorderColor  = "#000",
-        focusedBorderColor = "#222",
+        normalBorderColor  = "#002b36",
+        focusedBorderColor = "#657b83",
         -- hooks
         manageHook = myManageHook <+> manageDocks,
        -- layoutHook = avoidStruts $ layoutHook defaultConfig,

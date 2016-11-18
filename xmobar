@@ -1,16 +1,17 @@
-Config { font = "xft:terminus:size=8:antialias=true"
-       , bgColor = "#000"
-       , fgColor = "#fff"
+Config { font = "xft:inconsolata:size=10:antialias=true"
+       , bgColor = "#002b36"
+       , fgColor = "#657b83"
        , position = Top
        , lowerOnStart = True
-       , commands = [  Run Com "playing-song" ["-s","-r"] "music" 10
-                    , Run Com "xmobar-battery-widget" ["-s","-r"] "bat" 10
-                    , Run Com "oss-vol" ["-s","-r"] "vol" 10
-                    , Run Com "now" ["-s","-r"] "now" 10
-                    , Run Com "xmobar-connection-widget" ["-s","-r"] "conn" 10
+       , commands = [ 
+                     Run Com "/home/azer/localbin/xmobar-battery-widget" ["-s","-r"] "bat" 10
+                    , Run Com "/home/azer/localbin/now" ["-s","-r"] "now" 10
+                    , Run Cpu ["-L","3","-H","50","--normal","#657b83","--high","#657b83"] 10
+                    , Run Memory ["-t", "Mem: <usedratio>%"] 10
+                    , Run Com "/home/azer/localbin/xmobar-connection-widget" ["-s","-r"] "conn" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <fc=#555555>%music%</fc> %vol% %conn% | <fc=#555555>%bat%</fc> | <fc=#fff>%now%</fc> "
+       , template = " %StdinReader% }{ %cpu% | %memory% | %conn% | <fc=#777>%bat%</fc> | <fc=#777>%now%</fc> "
        }
