@@ -80,11 +80,11 @@ myTabConfig = defaultTheme { inactiveColor = "#050505", activeColor = "#050505",
 
 main = do
     putEnv "BROWSER=w3"
-    xmproc <- spawnPipe "xmobar $HOME/dotfiles/xmobar"
+    xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobar.hs"
     xmonad $ defaultConfig {
         -- basic conf
         modMask            = mod4Mask,
-        terminal           = "pantheon-terminal",
+        terminal           = "urxvt",
         borderWidth        = 2,
         workspaces         = ["home","dev","www", "4", "5", "6", "7", "8", "9"],
         -- colors

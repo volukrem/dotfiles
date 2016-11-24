@@ -12,12 +12,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:$PATH
 export GOPATH=$HOME/dev/golang
 export PATH=$PATH:$GOPATH/bin
 
-#export TERM=""
 export PATH=~/localbin:$PATH
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_MESSAGES="C"
 export EDITOR=vi
+export TERM=rxvt-unicode
 
 # ALIASES
 alias ls='ls -aG'
@@ -31,3 +31,4 @@ calc(){ awk "BEGIN{ print $* }" ;}
 
 
 TZ='US/Pacific'; export TZ
+

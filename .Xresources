@@ -4,6 +4,13 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
 URxvt.scrollBar:           false
 URxvt.saveLines:           4096
 URxvt.internalBorder:      3
@@ -12,10 +19,14 @@ URxvt.highlightSelection:  true
 URxvt.letterSpace: 0
 URxvt.lineSpace: 4
 URxvt.loginShell: true
-URxvt*termName: screen-256color
+URxvt*termName: rxvt-unicode-256color
 
-!URxvt.font: xft:Monaco:style=Regular:pixelsize=12:dpi=96:antialias=true
-!URxvt.boldFont: xft:Monaco:style=Normal:pixelsize=12:dpi=96:antialias=true
+URxvt.saveLines: 10000
+URxvt.xftAntialias: true
+URxvt.font: xft:Monaco:style=regular:pixelsize=12:antialias=true,hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+URxvt.boldFont:  xft:Monaco:style=regular:pixelsize=12:antialias=true,hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+URxvt.italicFont: xft:inconsolata:pixelsize=14:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+URxvt.boldItalicFont: xft:inconsolata:pixelsize=14:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
 
 URxvt.urlLauncher: w3
 URxvt.matcher.button: 1
