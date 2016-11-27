@@ -35,7 +35,7 @@ myManageHook = composeAll
 
 myKeys =
     [
-      ((mod4Mask, xK_p), spawn "dmenu_run"),
+      ((mod4Mask, xK_p), spawn "dmenu_run -fn 'Monaco-10' -nb '#222' -nf '#999' -sb '#aa3300'"),
       ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s"),
       ((mod4Mask, xK_o), sendMessage ToggleStruts),
       ((mod4Mask, xK_a), windows (W.view "home")),
