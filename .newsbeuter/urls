@@ -1,0 +1,42 @@
+# podcasts
+http://www.wnyc.org/feeds/all/
+http://feeds.wnyc.org/takeawaypodcast
+http://www.wnyc.org/feeds/shows/atc
+
+# daily news
+http://feeds.feedburner.com/hacker-news-feed-50?format=xml
+http://www.reddit.com/r/programming/hot/.rss
+http://www.reddit.com/r/sysadmin/hot/.rss
+http://www.reddit.com/r/linux/hot/.rss
+http://www.reddit.com/r/electronjs/hot/.rss
+http://www.reddit.com/r/emacs/hot/.rss
+http://www.reddit.com/r/golang/hot/.rss 
+http://www.reddit.com/r/worldnews/hot/.rss
+http://www.aljazeera.com/xml/rss/all.xml
+https://blog.golang.org/feed.atom
+http://99u.com/feed/
+
+# new yorker
+http://www.newyorker.com/feed/everything
+http://www.newyorker.com/feed/humor
+http://www.newyorker.com/feed/news
+http://www.newyorker.com/feed/culture
+http://www.newyorker.com/feed/business
+http://www.newyorker.com/feed/tech
+
+# trending
+http://github-trends.ryotarai.info/rss/github_trends_go_weekly.rss
+http://github-trends.ryotarai.info/rss/github_trends_javascript_weekly.rss
+http://github-trends.ryotarai.info/rss/github_trends_emacs-lisp_weekly.rss
+http://github-trends.ryotarai.info/rss/github_trends_css_weekly.rss
+
+# people
+https://addyosmani.com/rss.xml
+http://matt.might.net/articles/feed.rss
+
+# community
+http://lambda-the-ultimate.org/rss.xml
+http://functionsource.com/feeds/entries
+http://masteringemacs.org/feed
+https://www.indiehackers.com/feed.xml
+
