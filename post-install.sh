@@ -2,6 +2,14 @@
 cd ~/ && git clone https://github.com/azer/localbin.git
 cd ~/localbin && make
 
+# install tools that I use
+sudo pacman -S --noconfirm emacs \
+                           vim \
+                           moc \
+                           newsbeuter \
+                           irssi \
+                           nodejs
+
 # install spacemacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 rm -rf ~/.emacs.d/private
