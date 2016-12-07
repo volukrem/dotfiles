@@ -8,7 +8,8 @@ sudo pacman -S --noconfirm emacs \
                            moc \
                            newsbeuter \
                            irssi \
-                           nodejs
+                           nodejs \
+                           adobe-source-code-pro-fonts
                            
     
 
