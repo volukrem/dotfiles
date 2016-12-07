@@ -9,9 +9,8 @@ sudo pacman -S --noconfirm emacs \
                            newsbeuter \
                            irssi \
                            nodejs \
-                           adobe-source-code-pro-fonts
-                           
-    
+                           adobe-source-code-pro-fonts \
+                           surf
 
 # install spacemacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
