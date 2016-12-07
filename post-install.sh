@@ -27,3 +27,5 @@ git clone https://github.com/azer/irssi-config.git ~/.irssi
 
 # download wallpaper
 wget https://images.unsplash.com/photo-1479999564813-e9791bdfebf4 -O ~/wallpaper.jpg
+
+cp -r /usr/share/oh-my-zsh/ ~/.oh-my-zsh
