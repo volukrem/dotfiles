@@ -11,7 +11,6 @@ sudo pacman -S --noconfirm emacs \
                            nodejs \
                            adobe-source-code-pro-fonts \
                            surf
-
 # install spacemacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 rm -rf ~/.emacs.d/private
@@ -29,3 +28,6 @@ git clone https://github.com/azer/irssi-config.git ~/.irssi
 wget https://images.unsplash.com/photo-1479999564813-e9791bdfebf4 -O ~/wallpaper.jpg
 
 cp -r /usr/share/oh-my-zsh/ ~/.oh-my-zsh
+
+# nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
