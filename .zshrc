@@ -32,3 +32,7 @@ calc(){ awk "BEGIN{ print $* }" ;}
 
 TZ='US/Pacific'; export TZ
 
+source ~/localbin/bashmarks/bashmarks.sh
+
+export NVM_DIR="/home/azer/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
