@@ -44,11 +44,11 @@ myKeys =
       ((0, xK_Print), spawn "scrot")
        -- multimedia keys
        -- XF86AudioLowerVolume
-       , ((0            , 0x1008ff11), spawn "ossmix -- vmix0-outvol -2")
+       , ((0            , 0x1008ff11), spawn "amixer set Master 2-")
        -- XF86AudioRaiseVolume
-       , ((0            , 0x1008ff13), spawn "ossmix vmix0-outvol +2")
+       , ((0            , 0x1008ff13), spawn "amixer set Master 2+")
        -- XF86AudioMute
-       , ((0            , 0x1008ff12), spawn "amixer -q set PCM toggle")
+       , ((0            , 0x1008ff12), spawn "amixer set master toggle")
        -- XF86AudioNext
        , ((0            , 0x1008ff17), spawn "mocp -f")
        -- XF86AudioPrev
