@@ -35,12 +35,12 @@ myManageHook = composeAll
 
 myKeys =
     [
-      ((mod4Mask, xK_p), spawn "dmenu_run -fn 'Monaco-10' -nb '#222' -nf '#999' -sb '#aa3300'"),
+      ((mod3Mask, xK_p), spawn "dmenu_run -fn 'Monaco-10' -nb '#222' -nf '#999' -sb '#aa3300'"),
       ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s"),
-      ((mod4Mask, xK_o), sendMessage ToggleStruts),
-      ((mod4Mask, xK_a), windows (W.view "home")),
-      ((mod4Mask, xK_s), windows (W.view "code")),
-      ((mod4Mask, xK_d), windows (W.view "www")),
+      ((mod3Mask, xK_o), sendMessage ToggleStruts),
+      ((mod3Mask, xK_a), windows (W.view "home")),
+      ((mod3Mask, xK_s), windows (W.view "code")),
+      ((mod3Mask, xK_d), windows (W.view "www")),
       ((0, xK_Print), spawn "scrot")
        -- multimedia keys
        -- XF86AudioLowerVolume
@@ -76,9 +76,9 @@ myTabConfig = defaultTheme { inactiveColor = "#050505", activeColor = "#050505",
 main = do
     putEnv "BROWSER=w3"
     xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobar.hs"
-    xmonad $ defaultConfig {
+    xmonad $ docks $ defaultConfig {
         -- basic conf
-        modMask            = mod4Mask,
+        modMask            = mod3Mask,
         terminal           = "urxvt",
         borderWidth        = 2,
         workspaces         = ["home","www","code", "4", "5", "6", "7", "8", "9"],
@@ -88,7 +88,11 @@ main = do
         -- hooks
         manageHook = myManageHook <+> manageDocks,
        -- layoutHook = avoidStruts $ layoutHook defaultConfig,
-        layoutHook      = windowNavigation $ smartBorders $ (avoidStruts (tall ||| Mirror tall ||| noBorders (tabbed shrinkText myTabConfig) ||| noBorders Full ||| onWorkspace "WWW" (tabbed shrinkText myTabConfig) tall)) ||| simpleCross,
+        layoutHook      = windowNavigation $
+                          smartBorders $
+                          avoidStruts $ 
+                          (onWorkspace "code" (Mirror webdev ||| webdev ||| tall ||| Full)) $ 
+                          (avoidStruts (tall ||| Mirror tall ||| noBorders (tabbed shrinkText myTabConfig) ||| noBorders Full ||| onWorkspace "www" (tabbed shrinkText myTabConfig) tall)) ||| simpleCross,
         logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 100
@@ -96,5 +100,6 @@ main = do
         } `additionalKeys` myKeys
         where
           tall  = Tall 1 (3/100) (488/792)
+          webdev = Tall 2 0 (70/100)
           -- mosaic  = MosaicAlt M.empty
           -- combo   = combineTwo (TwoPane 0.03 (3/10)) (mosaic) (Full)

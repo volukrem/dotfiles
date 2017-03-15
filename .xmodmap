@@ -1,1 +1,5 @@
-keycode 135 = Super_R
+keycode 207 =
+keycode 135 = Hyper_L
+clear mod4
+clear mod3
+add mod3 = Hyper_L
