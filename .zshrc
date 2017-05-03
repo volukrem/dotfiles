@@ -9,7 +9,7 @@ PS1="  %{$fg[white]%}λ%{$reset_color%}  "
 unsetopt correct_all
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/go/bin:$PATH
-export GOPATH=$HOME/dev/golang
+export GOPATH=$HOME/code/golang
 export PATH=$PATH:$GOPATH/bin
 
 export PATH=~/localbin:$PATH
