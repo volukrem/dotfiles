@@ -20,5 +20,5 @@ Config { font = "xft:Monaco:style=regular:pixelsize=13:antialias=true,hinting=tr
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ %cpu% | %memory% %connection% | <fc=#777>%battery%</fc> | <fc=#777>%time%</fc> "
+       , template = " %StdinReader% }{ %cpu% | %memory% %connection% | <fc=#777>%time%</fc> "
        }

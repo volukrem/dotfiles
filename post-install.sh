@@ -10,7 +10,6 @@ sudo pacman -S --noconfirm emacs \
                            irssi \
                            adobe-source-code-pro-fonts \
                            surf
-
 # install spacemacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 rm -rf ~/.emacs.d/private
