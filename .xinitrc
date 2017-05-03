@@ -1,9 +1,9 @@
 xrdb -merge .Xresources
 unclutter -idle 1 &
-wallpaper /home/azer/wallpaper.jpg
 setterm -blank 0
 xset s off
 xmodmap .xmodmap
 xset -r 135 
-exec xmonad
+feh --bg-fill /home/azer/wallpaper.jpg
 xrandr --output VGA-1 --auto 
+exec xmonad
