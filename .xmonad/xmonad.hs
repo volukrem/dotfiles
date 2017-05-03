@@ -20,17 +20,22 @@ import XMonad.Layout.MosaicAlt
 import XMonad.Layout.Combo
 import XMonad.Layout.WindowNavigation
 import XMonad.Layout.Cross
+import XMonad.Layout.MultiToggle
+import XMonad.Layout.MultiToggle.Instances
+
 
 import XMonad.Layout.PerWorkspace
 
 import XMonad.Layout.NoBorders
+import XMonad.Actions.NoBorders
+import XMonad.Actions.WithAll
 
 myManageHook = composeAll
     [
       className =? "Emacs"            --> doF (W.shift "code"),
       className =? "delicious-surf"   --> doF (W.shift "www"),
       className =? "Firefox"          --> doF (W.shift "www"),
-      className =? "Chromium-browser" --> doF (W.shift "www")
+      className =? "chromium"         --> doF (W.shift "www")
     ]
 
 myKeys =
@@ -38,9 +43,10 @@ myKeys =
       ((mod4Mask, xK_p), spawn "dmenu_run -fn 'Monaco-10' -nb '#222' -nf '#999' -sb '#aa3300'"),
       ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s"),
       ((mod4Mask, xK_o), sendMessage ToggleStruts),
-      ((mod4Mask, xK_a), windows (W.view "home")),
-      ((mod4Mask, xK_s), windows (W.view "code")),
-      ((mod4Mask, xK_d), windows (W.view "www")),
+      ((mod4Mask, xK_a), windows (W.view "code")),
+      ((mod4Mask, xK_s), windows (W.view "www")),
+      ((mod4Mask, xK_d), windows (W.view "home")),
+      ((mod4Mask, xK_b), withAll toggleBorder),
       ((0, xK_Print), spawn "scrot")
        -- multimedia keys
        -- XF86AudioLowerVolume
