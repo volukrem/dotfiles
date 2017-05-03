@@ -1,5 +1,5 @@
 max-items        100
-browser          w3m
+browser          firefox
 show-read-feeds  no
 player           mplayer
 
