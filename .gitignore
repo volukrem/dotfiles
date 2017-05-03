@@ -1,0 +1,15 @@
+.newsbeuter/cache.db
+.newsbeuter/history*
+
+.config/Atom
+.config/Electron/
+.config/chromium/
+.config/dconf/
+.config/electron-quick-start/
+.config/gtk-2.0/
+.config/htop/
+.config/inkscape/
+.config/menus/
+.config/polybar/
+
+
