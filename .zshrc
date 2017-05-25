@@ -20,7 +20,7 @@ export EDITOR=vi
 export TERM=rxvt-unicode
 
 # ALIASES
-alias ls='ls -aG'
+alias ls='ls -aG --color=always'
 alias today="date '+%d%h%y'"
 alias mess='clear ; tail -f /var/log/messages'
 alias vi='vim'
