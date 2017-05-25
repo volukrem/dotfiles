@@ -30,3 +30,7 @@ cp -r /usr/share/oh-my-zsh/ ~/.oh-my-zsh
 
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+
+# install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source /home/azer/.tmux.conf
