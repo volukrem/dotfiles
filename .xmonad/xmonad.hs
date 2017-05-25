@@ -84,7 +84,7 @@ main = do
     xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobar.hs"
     xmonad $ docks $ defaultConfig {
         -- basic conf
-        modMask            = mod3Mask,
+        modMask            = mod4Mask,
         terminal           = "urxvt",
         borderWidth        = 2,
         workspaces         = ["home","www","code", "4", "5", "6", "7", "8", "9"],
@@ -106,6 +106,6 @@ main = do
         } `additionalKeys` myKeys
         where
           tall  = Tall 1 (3/100) (488/792)
-          webdev = Tall 2 0 (70/100)
+          webdev = Tall 1 0 (70/100)
           -- mosaic  = MosaicAlt M.empty
           -- combo   = combineTwo (TwoPane 0.03 (3/10)) (mosaic) (Full)
