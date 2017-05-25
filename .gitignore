@@ -1,3 +1,8 @@
+.xmonad/xmonad-x86_64-linux
+.xmonad/xmonad.errors
+.xmonad/xmonad.hi
+.xmonad/xmonad.o
+
 .newsbeuter/cache.db
 .newsbeuter/history*
 
@@ -11,5 +16,5 @@
 .config/inkscape/
 .config/menus/
 .config/polybar/
-
+.config/Insomnia
 
